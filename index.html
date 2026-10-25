@@ -10,11 +10,13 @@
   <h1>Bear Ninja Hunter</h1>
   <p id="demo"></p>
   <script>
+
+    
     // Ask the player for their name
     let playerName = prompt('Welcome to Bear Hunter Ninja! Please enter your name:');
 
     // Greet the player
-    alert(`Hi ${playerName} Let's Play!!`);
+    alert(`Hi ${playerName}, Let's Play!!`);
 
     // Ask the player for choice
     let playerChoice = prompt('Who are you: Bear, Ninja, or Hunter?');
@@ -41,7 +43,7 @@
         break;
       case 'Ninja':
         if (computerChoice === 'Ninja') {
-          outcomeMessage = "It's a Tie!!";        // Ninja vs Ninja
+          outcomeMessage = "It's a Tie!";        // Ninja vs Ninja
         } else if (computerChoice === 'Hunter') {
           outcomeMessage = 'You Win!!';           // Ninja beats Hunter
         } else if (computerChoice === 'Bear'){
@@ -63,12 +65,11 @@
         break;
     }
 
-    // Announce result 
-    let gameResult = playerName + ' chose ' + playerChoice + ', computer chose ' + computerChoice + ', ' + outcomeMessage;
-
-    // Show the result on the HTML page + show the result in the browser console
-    document.getElementById('demo').innerHTML = gameResult;
-    console.log(gameResult);
+     // Show each line on the HTML page
+    document.getElementById('demo').innerHTML = playerName + ' you chose '+ playerChoice  + '<br>' + 'The computer chose' + computerChoice + '<br>' + outcomeMessage;
+ 
+    // Show each line in the console
+    console.log(playerName + ' you chose '+ playerChoice  + '\n' + 'The computer chose' + computerChoice + '\n' + outcomeMessage);
   </script>
 </body>
 </html>
